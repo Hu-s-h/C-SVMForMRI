@@ -1,7 +1,7 @@
 # C-SVMForMRI
 AD classification by using c-SVM
 
-First, enter the PreProcessing folder and run batchPreProcessing.m to preprocess the sMRI data;
+First, enter the PreProcessing folder and run batchPreProcessing.m(or run ac-pc.m and batch) to preprocess the sMRI data;
 
 Then, enter the Extract_Feacture folder and run ExtractFeature_SPM.m for feature extraction;
 
