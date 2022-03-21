@@ -3,7 +3,7 @@
 % 1. Set origin to center (utilizing a script by F. Yamashita)
 % 2. Coregistration of the image to icbm152.nii under spm/toolbox/DARTEL
 % 
-% K. Nemoto 22/May/2017
+% Huang 19/May/2021
 
 % %% Initialize batch
 spm_jobman('initcfg');
