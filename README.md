@@ -1,5 +1,5 @@
 # C-SVMForMRI
-AD classification by using c-SVM
+AD classification by using c-SVM based on SGL1/2.
 
 First, enter the PreProcessing folder and run batchPreProcessing.m(or run ac-pc.m and batch_job.m) to preprocess the sMRI data;
 
