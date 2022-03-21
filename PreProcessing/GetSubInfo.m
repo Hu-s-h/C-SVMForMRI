@@ -1,4 +1,4 @@
-%% This method is used to automatically obtain important information about subjects in this part of the data set when taking part of the data (AD, MCI, CN, SMC, EMCI, LMCI) from the total set
+%% This method is used to automatically obtain important information about subjects in this part of the data set when taking part of the data (AD, MCI, CN, etc) from the total set
 % if isempty(strfind( CurrentSystem,'WIN'))
 %     separation='/';
 % else
