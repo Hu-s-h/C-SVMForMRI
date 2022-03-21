@@ -12,7 +12,7 @@ XFeature = [ADdata;CNdata];
 YLabel = [ones(size(ADdata,1),1);-1*ones(size(CNdata,1),1)];
 SubNum=size(XFeature,1);%Number of subjects
 D=size(XFeature,2);
-%% ClassOptѡ��
+%% ClassOptÑ¡Ïî
 ClassOpt.isbias = 1; % Is or not have deviation value -- > 1: Yes 0: no
 ClassOpt.classifier = 'chinge'; % Loss function type hinge,chinge,least,logreg
 ClassOpt.show=1;
@@ -63,11 +63,7 @@ TestTrueLabelArray = {};
 TestPred2Array={};
 TrainPred1Array={};
 for r=1:RNum
-    if r==1
-        W0=zeros(D+ClassOpt.isbias,1);
-    else
-        W0=2*(rand(D+ClassOpt.isbias,1)-0.5)*1;
-    end
+    W0=zeros(D+ClassOpt.isbias,1);
     WList = []; 
     LOGCVList=[];
     TrainPredScoreList = [];
@@ -107,9 +103,7 @@ for r=1:RNum
         TestTrueLabelList = [TestTrueLabelList;TrueLabel2];
         TestPred2List = [TestPred2List;TestPred2];
         TrainPred1List = [TrainPred1List;TrainPred1];
-%         W0=W;
         W0=zeros(D+ClassOpt.isbias,1);
-%         W0=2*(rand(D+ClassOpt.isbias,1)-0.5)*1;
     end
     TrainPredScoreArray = [TrainPredScoreArray;TrainPredScoreList];
     TrainPredLabelArray = [TrainPredLabelArray;TrainPredLabelList];
