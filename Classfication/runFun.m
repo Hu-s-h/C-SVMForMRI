@@ -101,11 +101,7 @@ for i=1:N
     TestPredLabelArray = {};
     TestTrueLabelArray = {};
     for r=1:RNum
-        if r==1
-            W0=zeros(D+ClassOpt.isbias,1); %Set initial weight
-        else
-            W0=2*(rand(D+ClassOpt.isbias,1)-0.5)*1;
-        end
+        W0=zeros(D+ClassOpt.isbias,1); %Set initial weight
         WList = []; 
         LOGCVList=[];
         TrainPredScoreList = [];
@@ -142,7 +138,7 @@ for i=1:N
             nfoldAcc1=sum(PredLabel1==TrueLabel1)/size(PredLabel1,1);
             nfoldAcc2=sum(PredLabel2==TrueLabel2)/size(PredLabel2,1);
             disp(['currunt cross:' num2str(r) ',fold:' num2str(j) 'cross validation is completed. The accuracy of the training set is:' num2str(nfoldAcc1) ',and the accuracy of the test set is:' num2str(nfoldAcc2)])
-            W0=W;
+            W0=zeros(D+ClassOpt.isbias,1); %Set initial weight
         end
         currAcc=sum(TestPredLabelList==TestTrueLabelList)/size(TestPredLabelList,1);
         disp(['The ' num2str(r) '-th' num2str(CVNum) '-foldcross validation is completed.The average accuracy is:' num2str(currAcc)])
@@ -228,5 +224,5 @@ TestResult.PredScore=N_TestPredScoreArray;
 
 EvalResult.Test = TestResult;
 
-EvalResultPath=uigetdir(pwd,'ÇëÉèÖÃÆÀ¹À½á¹û´æ´¢Â·¾¶');%ÉèÖÃÆÀ¹À½á¹ûÂ·¾¶
+EvalResultPath=uigetdir(pwd,'Ã‡Ã«Ã‰Ã¨Ã–ÃƒÃ†Ã€Â¹Ã€Â½Ã¡Â¹Ã»Â´Ã¦Â´Â¢Ã‚Â·Â¾Â¶');%Ã‰Ã¨Ã–ÃƒÃ†Ã€Â¹Ã€Â½Ã¡Â¹Ã»Ã‚Â·Â¾Â¶
 save(EvalResultPath, 'EvalResult');
