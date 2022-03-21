@@ -60,12 +60,12 @@ function [GroupWeight] = SetGroupWeight(XFeature,YLabel,GroupLabel,GroupIndListA
                     [W,LOG] = fitOpt(W0,TrainFeature,TrainYList,Opt);
 
                     % Calculate training set
-                    [PredScore1,PredLabel1,TrueLabel1] = Predict_LinearSVM(TrainFeature,TrainYList,W,Opt);
+                    [PredScore1,PredLabel1,TrueLabel1] = Predict_Model(TrainFeature,TrainYList,W,Opt);
                     TrainPredScore = [TrainPredScore;PredScore1];
                     TrainPredLabel = [TrainPredLabel;PredLabel1];
                     TrainTrueLabel = [TrainTrueLabel;TrueLabel1];
                     % Calculate test set
-                    [PredScore2,PredLabel2,TrueLabel2] = Predict_LinearSVM(TestFeature,TestYList,W,Opt);
+                    [PredScore2,PredLabel2,TrueLabel2] = Predict_Model(TestFeature,TestYList,W,Opt);
                     TestPredScore = [TestPredScore;PredScore2];
                     TestPredLabel = [TestPredLabel;PredLabel2];
                     TestTrueLabel = [TestTrueLabel;TrueLabel2];
