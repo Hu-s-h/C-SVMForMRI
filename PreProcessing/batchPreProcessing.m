@@ -3,7 +3,7 @@
 % 1. Set origin to center (utilizing a script by F. Yamashita)
 % 2. Coregistration of the image to icbm152.nii under spm/toolbox/DARTEL
 % 
-% K. Nemoto 22/May/2017
+% Huang 19/May/2021
 
 % %% Initialize batch
 spm_jobman('initcfg');
@@ -27,7 +27,7 @@ for i=1:length(dirinfo)
             end
         end
         if flag==1
-            targetdir=[targetdir,[dirname filesep dirinfo(i).name]];%取出所有文件夹名称
+            targetdir=[targetdir,[dirname filesep dirinfo(i).name]];%脠隆鲁枚脣霉脫脨脦脛录镁录脨脙没鲁脝
         end
     end 
 end
