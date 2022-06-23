@@ -1,4 +1,4 @@
-%% Before running this script, please run 'exctfeac_from_spm.m' 
+%% Before running this script, please run 'exctfeac_from_spm.m'
 %% under folder 'Exctract_Feacture',get characteristic matrix, mask and segment
 datapath ='D:\MRI_ToolsAndData\Data\MRI_Alg_hsh\Feature\aalMaskFeac\mwp1\ADNIFeac\ADNI3';
 % datapath = 'D:\MRI_ToolsAndData\Data\MRI_Alg_hsh\Feature\CuingnetFeac\rmwp';
@@ -12,7 +12,7 @@ XFeature = [ADdata;CNdata];
 YLabel = [ones(size(ADdata,1),1);-1*ones(size(CNdata,1),1)];
 SubNum=size(XFeature,1);%Number of subjects
 D=size(XFeature,2);
-%% ClassOpt选项
+%% ClassOpt
 ClassOpt.isbias = 1; % Is or not have deviation value -- > 1: Yes 0: no
 ClassOpt.classifier = 'chinge'; % Loss function type hinge,chinge,least,logreg
 ClassOpt.show=1;
