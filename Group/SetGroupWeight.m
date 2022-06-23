@@ -110,7 +110,7 @@ function [GroupWeight] = SetGroupWeight(XFeature,YLabel,GroupLabel,GroupIndListA
         TestResultPath = ['D:\MRI_ToolsAndData\Data\MRI_Alg_hsh\Result', filesep, TestResultName];
         save(TestResultPath, 'TestResult');
 
-        GroupWeight=1./TestAccList;
+        GroupWeight=TestAccList;
         GroupWeight=mapminmax(GroupWeight',0,1)';
         GroupWeightPath=['D:\MRI_ToolsAndData\Data\MRI_Alg_hsh\Result\' Opt.templateType '_GroupWeight.mat'];
         save(GroupWeightPath, 'GroupWeight');
